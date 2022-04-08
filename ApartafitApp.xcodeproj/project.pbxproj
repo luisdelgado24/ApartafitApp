@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3202D88427EFB4C1001CEF93 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3202D88327EFB4C1001CEF93 /* HomeViewController.m */; };
+		3202D88627EFCC17001CEF93 /* AccountCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3202D88527EFCC17001CEF93 /* AccountCreationViewController.m */; };
+		3209C90727E1753E002BF272 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3209C90627E1753E002BF272 /* AppDelegate.m */; };
+		3209C90A27E1753E002BF272 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3209C90927E1753E002BF272 /* SceneDelegate.m */; };
+		3209C90D27E1753E002BF272 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3209C90C27E1753E002BF272 /* ViewController.m */; };
+		3209C91027E1753E002BF272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3209C90E27E1753E002BF272 /* Main.storyboard */; };
+		3209C91227E1753F002BF272 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3209C91127E1753F002BF272 /* Assets.xcassets */; };
+		3209C91527E1753F002BF272 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3209C91327E1753F002BF272 /* LaunchScreen.storyboard */; };
+		3209C91827E1753F002BF272 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3209C91727E1753F002BF272 /* main.m */; };
+		32CC922527FD368800DBC9E6 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32CC922427FD368800DBC9E6 /* Roboto-Light.ttf */; };
+		32CC922727FD369F00DBC9E6 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32CC922627FD369F00DBC9E6 /* Roboto-Regular.ttf */; };
+		32CC922927FD36AC00DBC9E6 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32CC922827FD36AC00DBC9E6 /* Roboto-Thin.ttf */; };
+		32CC922C27FFD56F00DBC9E6 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32CC922A27FFD56F00DBC9E6 /* Roboto-Black.ttf */; };
+		32CC922D27FFD56F00DBC9E6 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32CC922B27FFD56F00DBC9E6 /* Roboto-Medium.ttf */; };
+		8A4C424BB32B6B0390C390C7 /* Pods_ApartafitApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301C08C20F34DFE64507B8CA /* Pods_ApartafitApp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		301C08C20F34DFE64507B8CA /* Pods_ApartafitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApartafitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3202D88227EFB4B0001CEF93 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		3202D88327EFB4C1001CEF93 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		3202D88527EFCC17001CEF93 /* AccountCreationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountCreationViewController.m; sourceTree = "<group>"; };
+		3202D88727EFCC27001CEF93 /* AccountCreationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountCreationViewController.h; sourceTree = "<group>"; };
+		3209C90227E1753E002BF272 /* ApartafitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApartafitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3209C90527E1753E002BF272 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3209C90627E1753E002BF272 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3209C90827E1753E002BF272 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		3209C90927E1753E002BF272 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		3209C90B27E1753E002BF272 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3209C90C27E1753E002BF272 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3209C90F27E1753E002BF272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3209C91127E1753F002BF272 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3209C91427E1753F002BF272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3209C91627E1753F002BF272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3209C91727E1753F002BF272 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CC922427FD368800DBC9E6 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		32CC922627FD369F00DBC9E6 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		32CC922827FD36AC00DBC9E6 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		32CC922A27FFD56F00DBC9E6 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		32CC922B27FFD56F00DBC9E6 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		70BC21F8E8F95A79FC25DF2B /* Pods-ApartafitApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApartafitApp.debug.xcconfig"; path = "Target Support Files/Pods-ApartafitApp/Pods-ApartafitApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D3B91CC8A437F8A5C1CB799D /* Pods-ApartafitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApartafitApp.release.xcconfig"; path = "Target Support Files/Pods-ApartafitApp/Pods-ApartafitApp.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3209C8FF27E1753E002BF272 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A4C424BB32B6B0390C390C7 /* Pods_ApartafitApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2EF01CA57A416B25C255FAD2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				301C08C20F34DFE64507B8CA /* Pods_ApartafitApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3209C8F927E1753E002BF272 = {
+			isa = PBXGroup;
+			children = (
+				3209C90427E1753E002BF272 /* ApartafitApp */,
+				3209C90327E1753E002BF272 /* Products */,
+				5477DB2ECBC0A74F01119010 /* Pods */,
+				2EF01CA57A416B25C255FAD2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3209C90327E1753E002BF272 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3209C90227E1753E002BF272 /* ApartafitApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3209C90427E1753E002BF272 /* ApartafitApp */ = {
+			isa = PBXGroup;
+			children = (
+				3202D88727EFCC27001CEF93 /* AccountCreationViewController.h */,
+				3202D88527EFCC17001CEF93 /* AccountCreationViewController.m */,
+				3209C90527E1753E002BF272 /* AppDelegate.h */,
+				3209C90627E1753E002BF272 /* AppDelegate.m */,
+				3202D88227EFB4B0001CEF93 /* HomeViewController.h */,
+				3202D88327EFB4C1001CEF93 /* HomeViewController.m */,
+				3209C90827E1753E002BF272 /* SceneDelegate.h */,
+				3209C90927E1753E002BF272 /* SceneDelegate.m */,
+				3209C90B27E1753E002BF272 /* ViewController.h */,
+				3209C90C27E1753E002BF272 /* ViewController.m */,
+				3209C90E27E1753E002BF272 /* Main.storyboard */,
+				3209C91127E1753F002BF272 /* Assets.xcassets */,
+				3209C91327E1753F002BF272 /* LaunchScreen.storyboard */,
+				3209C91627E1753F002BF272 /* Info.plist */,
+				3209C91727E1753F002BF272 /* main.m */,
+				32CC922427FD368800DBC9E6 /* Roboto-Light.ttf */,
+				32CC922627FD369F00DBC9E6 /* Roboto-Regular.ttf */,
+				32CC922A27FFD56F00DBC9E6 /* Roboto-Black.ttf */,
+				32CC922B27FFD56F00DBC9E6 /* Roboto-Medium.ttf */,
+				32CC922827FD36AC00DBC9E6 /* Roboto-Thin.ttf */,
+			);
+			path = ApartafitApp;
+			sourceTree = "<group>";
+		};
+		5477DB2ECBC0A74F01119010 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				70BC21F8E8F95A79FC25DF2B /* Pods-ApartafitApp.debug.xcconfig */,
+				D3B91CC8A437F8A5C1CB799D /* Pods-ApartafitApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3209C90127E1753E002BF272 /* ApartafitApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3209C91B27E1753F002BF272 /* Build configuration list for PBXNativeTarget "ApartafitApp" */;
+			buildPhases = (
+				FB16F7CF9117A22781B426F9 /* [CP] Check Pods Manifest.lock */,
+				3209C8FE27E1753E002BF272 /* Sources */,
+				3209C8FF27E1753E002BF272 /* Frameworks */,
+				3209C90027E1753E002BF272 /* Resources */,
+				7FB413313C2DE696C18361B9 /* [CP] Embed Pods Frameworks */,
+				112AD868A49BF0D368B37107 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ApartafitApp;
+			productName = ApartafitApp;
+			productReference = 3209C90227E1753E002BF272 /* ApartafitApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3209C8FA27E1753E002BF272 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					3209C90127E1753E002BF272 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 3209C8FD27E1753E002BF272 /* Build configuration list for PBXProject "ApartafitApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3209C8F927E1753E002BF272;
+			productRefGroup = 3209C90327E1753E002BF272 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3209C90127E1753E002BF272 /* ApartafitApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3209C90027E1753E002BF272 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32CC922927FD36AC00DBC9E6 /* Roboto-Thin.ttf in Resources */,
+				32CC922727FD369F00DBC9E6 /* Roboto-Regular.ttf in Resources */,
+				3209C91527E1753F002BF272 /* LaunchScreen.storyboard in Resources */,
+				32CC922C27FFD56F00DBC9E6 /* Roboto-Black.ttf in Resources */,
+				32CC922527FD368800DBC9E6 /* Roboto-Light.ttf in Resources */,
+				3209C91227E1753F002BF272 /* Assets.xcassets in Resources */,
+				3209C91027E1753E002BF272 /* Main.storyboard in Resources */,
+				32CC922D27FFD56F00DBC9E6 /* Roboto-Medium.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		112AD868A49BF0D368B37107 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ApartafitApp/Pods-ApartafitApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ApartafitApp/Pods-ApartafitApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ApartafitApp/Pods-ApartafitApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FB413313C2DE696C18361B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ApartafitApp/Pods-ApartafitApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ApartafitApp/Pods-ApartafitApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ApartafitApp/Pods-ApartafitApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB16F7CF9117A22781B426F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ApartafitApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3209C8FE27E1753E002BF272 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3209C90D27E1753E002BF272 /* ViewController.m in Sources */,
+				3202D88427EFB4C1001CEF93 /* HomeViewController.m in Sources */,
+				3202D88627EFCC17001CEF93 /* AccountCreationViewController.m in Sources */,
+				3209C90727E1753E002BF272 /* AppDelegate.m in Sources */,
+				3209C91827E1753F002BF272 /* main.m in Sources */,
+				3209C90A27E1753E002BF272 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3209C90E27E1753E002BF272 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3209C90F27E1753E002BF272 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3209C91327E1753F002BF272 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3209C91427E1753F002BF272 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3209C91927E1753F002BF272 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3209C91A27E1753F002BF272 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3209C91C27E1753F002BF272 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70BC21F8E8F95A79FC25DF2B /* Pods-ApartafitApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ApartafitApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ApartafitApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3209C91D27E1753F002BF272 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3B91CC8A437F8A5C1CB799D /* Pods-ApartafitApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ApartafitApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ApartafitApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3209C8FD27E1753E002BF272 /* Build configuration list for PBXProject "ApartafitApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3209C91927E1753F002BF272 /* Debug */,
+				3209C91A27E1753F002BF272 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3209C91B27E1753F002BF272 /* Build configuration list for PBXNativeTarget "ApartafitApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3209C91C27E1753F002BF272 /* Debug */,
+				3209C91D27E1753F002BF272 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3209C8FA27E1753E002BF272 /* Project object */;
+}
