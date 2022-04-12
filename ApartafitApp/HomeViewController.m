@@ -2,8 +2,7 @@
 
 #import "AccountCreationViewController.h"
 #import "MaterialButtons.h"
-
-static const CGFloat kTextFieldWidth = 200;
+#import "MemberViewController.h"
 
 @interface HomeViewController ()
 
@@ -77,16 +76,18 @@ static const CGFloat kTextFieldWidth = 200;
     
     
     UILabel *loginLabel = [[self class] labelWithText:@"" size:14];
-    loginLabel.backgroundColor = [UIColor lightGrayColor];
     NSMutableAttributedString *attributedString;
     attributedString = [[NSMutableAttributedString alloc] initWithString:@"Log in"];
     [attributedString addAttribute:NSUnderlineStyleAttributeName value:@1 range:NSMakeRange(0, [attributedString length])];
     [loginLabel setAttributedText:attributedString];
-    
     loginLabel.textColor = UIColor.whiteColor;
     [orLoginContainer addSubview:loginLabel];
     [loginLabel sizeToFit];
     
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapLoginLabel)];
+    [loginLabel addGestureRecognizer:tapGestureRecognizer];
+    loginLabel.userInteractionEnabled = YES;
+
     [self.view addSubview:orLoginContainer];
     
     CGFloat orLoginWidth = orLabel.bounds.size.width + loginLabel.bounds.size.width + 5;
@@ -99,46 +100,16 @@ static const CGFloat kTextFieldWidth = 200;
         [orLabel.leadingAnchor constraintEqualToAnchor:orLoginContainer.leadingAnchor],
         [loginLabel.leadingAnchor constraintEqualToAnchor:orLabel.trailingAnchor constant:5],
     ]];
-    
-    
-//    UILabel *loginLabel = [[self class] labelWithText:@"Login:"];
-//    loginLabel.textColor = UIColor.whiteColor;
-//    loginLabel.font = [UIFont boldSystemFontOfSize:20.0];
-//
-//    UITextField *loginTextField = [[self class] textFieldWithPlaceholderText:@""];
-//    loginTextField.layer.borderColor = UIColor.whiteColor.CGColor;
-//    loginTextField.textColor = UIColor.whiteColor;
-//    loginTextField.font = [UIFont boldSystemFontOfSize:20.0];
-//
-//    UIView *containerView = [[UIView alloc] init];
-//    containerView.translatesAutoresizingMaskIntoConstraints = NO;
-//
-//    [containerView addSubview:loginLabel];
-//    [loginLabel sizeToFit];
-//
-//    [containerView addSubview:loginTextField];
-//    [loginTextField sizeToFit];
-//
-//    [self.view addSubview:containerView];
-//
-//    CGFloat dynamicWidth = loginLabel.frame.size.width + loginTextField.frame.size.width + kTextFieldWidth;
-//
-//    [NSLayoutConstraint activateConstraints:@[
-//        [containerView.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor],
-//        [containerView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
-//        [containerView.widthAnchor constraintEqualToConstant:dynamicWidth],
-//        [containerView.heightAnchor constraintEqualToConstant:45],
-//        [loginLabel.centerYAnchor constraintEqualToAnchor:containerView.centerYAnchor],
-//        [loginLabel.leadingAnchor constraintEqualToAnchor:containerView.leadingAnchor],
-//        [loginTextField.leadingAnchor constraintEqualToAnchor:loginLabel.trailingAnchor constant:6],
-//        [loginTextField.centerYAnchor constraintEqualToAnchor:loginLabel.centerYAnchor],
-//        [loginTextField.widthAnchor constraintEqualToConstant:kTextFieldWidth],
-//    ]];
 }
 
 - (void)didTapSignUpButton {
     AccountCreationViewController *acctCreationViewController = [[AccountCreationViewController alloc] init];
     [self presentViewController:acctCreationViewController animated:YES completion:nil];
+}
+
+- (void)didTapLoginLabel {
+    MemberViewController *memberViewController = [[MemberViewController alloc] init];
+    [self presentViewController:memberViewController animated:YES completion:nil];
 }
 
 + (UILabel *)labelWithText:(NSString *)text size:(CGFloat)size {

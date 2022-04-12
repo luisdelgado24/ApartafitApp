@@ -21,6 +21,8 @@
 		32CC922927FD36AC00DBC9E6 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32CC922827FD36AC00DBC9E6 /* Roboto-Thin.ttf */; };
 		32CC922C27FFD56F00DBC9E6 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32CC922A27FFD56F00DBC9E6 /* Roboto-Black.ttf */; };
 		32CC922D27FFD56F00DBC9E6 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32CC922B27FFD56F00DBC9E6 /* Roboto-Medium.ttf */; };
+		32CC922F28051DC500DBC9E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32CC922E28051DC500DBC9E6 /* GoogleService-Info.plist */; };
+		32CC92322805252E00DBC9E6 /* MemberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CC92312805252E00DBC9E6 /* MemberViewController.m */; };
 		8A4C424BB32B6B0390C390C7 /* Pods_ApartafitApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301C08C20F34DFE64507B8CA /* Pods_ApartafitApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,9 @@
 		32CC922827FD36AC00DBC9E6 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		32CC922A27FFD56F00DBC9E6 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		32CC922B27FFD56F00DBC9E6 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		32CC922E28051DC500DBC9E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		32CC92302805250900DBC9E6 /* MemberViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberViewController.h; sourceTree = "<group>"; };
+		32CC92312805252E00DBC9E6 /* MemberViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberViewController.m; sourceTree = "<group>"; };
 		70BC21F8E8F95A79FC25DF2B /* Pods-ApartafitApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApartafitApp.debug.xcconfig"; path = "Target Support Files/Pods-ApartafitApp/Pods-ApartafitApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D3B91CC8A437F8A5C1CB799D /* Pods-ApartafitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApartafitApp.release.xcconfig"; path = "Target Support Files/Pods-ApartafitApp/Pods-ApartafitApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +103,8 @@
 				3209C90627E1753E002BF272 /* AppDelegate.m */,
 				3202D88227EFB4B0001CEF93 /* HomeViewController.h */,
 				3202D88327EFB4C1001CEF93 /* HomeViewController.m */,
+				32CC92302805250900DBC9E6 /* MemberViewController.h */,
+				32CC92312805252E00DBC9E6 /* MemberViewController.m */,
 				3209C90827E1753E002BF272 /* SceneDelegate.h */,
 				3209C90927E1753E002BF272 /* SceneDelegate.m */,
 				3209C90B27E1753E002BF272 /* ViewController.h */,
@@ -112,6 +119,7 @@
 				32CC922A27FFD56F00DBC9E6 /* Roboto-Black.ttf */,
 				32CC922B27FFD56F00DBC9E6 /* Roboto-Medium.ttf */,
 				32CC922827FD36AC00DBC9E6 /* Roboto-Thin.ttf */,
+				32CC922E28051DC500DBC9E6 /* GoogleService-Info.plist */,
 			);
 			path = ApartafitApp;
 			sourceTree = "<group>";
@@ -187,6 +195,7 @@
 			files = (
 				32CC922927FD36AC00DBC9E6 /* Roboto-Thin.ttf in Resources */,
 				32CC922727FD369F00DBC9E6 /* Roboto-Regular.ttf in Resources */,
+				32CC922F28051DC500DBC9E6 /* GoogleService-Info.plist in Resources */,
 				3209C91527E1753F002BF272 /* LaunchScreen.storyboard in Resources */,
 				32CC922C27FFD56F00DBC9E6 /* Roboto-Black.ttf in Resources */,
 				32CC922527FD368800DBC9E6 /* Roboto-Light.ttf in Resources */,
@@ -263,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3209C90D27E1753E002BF272 /* ViewController.m in Sources */,
+				32CC92322805252E00DBC9E6 /* MemberViewController.m in Sources */,
 				3202D88427EFB4C1001CEF93 /* HomeViewController.m in Sources */,
 				3202D88627EFCC17001CEF93 /* AccountCreationViewController.m in Sources */,
 				3209C90727E1753E002BF272 /* AppDelegate.m in Sources */,

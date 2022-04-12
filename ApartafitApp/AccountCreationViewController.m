@@ -26,7 +26,15 @@
     
     [self addBorder];
     
-    UILabel *signUpDescriptionLabel = [[self class] labelWithText:@"Sign up for an Apartafit Account to begin receiving customized workout routines." size:16];
+    UILabel *signUpDescriptionLabel = [[self class] labelWithText:@"" size:16];
+    NSString *text = @"Sign up for an Apartafit Account to begin receiving customized workout routines.";
+    NSMutableParagraphStyle *signUpDescriptionParagraph = [[NSMutableParagraphStyle alloc] init];
+    signUpDescriptionParagraph.alignment = NSTextAlignmentCenter;
+    signUpDescriptionParagraph.lineSpacing = 2.0f;
+    signUpDescriptionParagraph.lineHeightMultiple = 1.3;
+    NSMutableAttributedString* attrText = [[NSMutableAttributedString alloc] initWithString:text];
+    [attrText addAttribute:NSParagraphStyleAttributeName value:signUpDescriptionParagraph range:NSMakeRange(0, text.length)];
+    signUpDescriptionLabel.attributedText = attrText;
     signUpDescriptionLabel.textColor = UIColor.whiteColor;
     signUpDescriptionLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:signUpDescriptionLabel];
@@ -43,7 +51,7 @@
 
     [NSLayoutConstraint activateConstraints:@[
         [emailTextField.leadingAnchor constraintEqualToAnchor:signUpDescriptionLabel.leadingAnchor],
-        [emailTextField.topAnchor constraintEqualToAnchor:signUpDescriptionLabel.bottomAnchor constant:18],
+        [emailTextField.topAnchor constraintEqualToAnchor:signUpDescriptionLabel.bottomAnchor constant:28],
         [emailTextField.widthAnchor constraintEqualToAnchor:self.view.widthAnchor multiplier:.8],
     ]];
     
