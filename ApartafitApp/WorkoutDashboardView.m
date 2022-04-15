@@ -53,7 +53,7 @@
             [_routineCollectionViewController.view.topAnchor constraintEqualToAnchor:introLabel.bottomAnchor],
             [_routineCollectionViewController.view.centerXAnchor constraintEqualToAnchor:self.centerXAnchor],
             [_routineCollectionViewController.view.widthAnchor constraintEqualToAnchor:self.widthAnchor],
-            [_routineCollectionViewController.view.heightAnchor constraintEqualToConstant:40],
+            [_routineCollectionViewController.view.heightAnchor constraintEqualToConstant:400],
         ]];
     }
 
