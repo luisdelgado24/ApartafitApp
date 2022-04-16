@@ -45,15 +45,15 @@
             [introLabel.widthAnchor constraintEqualToAnchor:self.widthAnchor multiplier:.85],
         ]];
 
-        _routineCollectionViewController = [[WorkoutRoutineCollectionViewController alloc] init];
+        _routineCollectionViewController = [[WorkoutRoutineCollectionViewController alloc] initWithConfig:[[self class] workoutRoutineConfig]];
         _routineCollectionViewController.view.translatesAutoresizingMaskIntoConstraints = NO;
         [self addSubview:_routineCollectionViewController.view];
         
         [NSLayoutConstraint activateConstraints:@[
-            [_routineCollectionViewController.view.topAnchor constraintEqualToAnchor:introLabel.bottomAnchor],
+            [_routineCollectionViewController.view.topAnchor constraintEqualToAnchor:introLabel.bottomAnchor constant:10],
             [_routineCollectionViewController.view.centerXAnchor constraintEqualToAnchor:self.centerXAnchor],
             [_routineCollectionViewController.view.widthAnchor constraintEqualToAnchor:self.widthAnchor],
-            [_routineCollectionViewController.view.heightAnchor constraintEqualToConstant:400],
+            [_routineCollectionViewController.view.bottomAnchor constraintEqualToAnchor:self.bottomAnchor],
         ]];
     }
 
@@ -81,6 +81,31 @@
     label.numberOfLines = 0;
     label.font = [UIFont fontWithName:@"Roboto-Black" size:size];
     return label;
+}
+
++ (NSDictionary<NSString *, UIImageView *> *)workoutRoutineConfig {
+    NSMutableDictionary<NSString *, UIImageView *> *config = [NSMutableDictionary dictionary];
+    
+    UIImageView *pullupsImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"pullups"]];
+    pullupsImageView.contentMode = UIViewContentModeScaleAspectFill;
+    config[@"• 4 sets of pull-ups"] = pullupsImageView;
+    
+    UIImageView *tbarRowImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tbarrow"]];
+    tbarRowImageView.contentMode = UIViewContentModeScaleAspectFill;
+    config[@"• 3 sets of T-bar row"] = tbarRowImageView;
+    
+    UIImageView *seatedRowImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"seatedrow1"]];
+    seatedRowImageView.contentMode = UIViewContentModeScaleAspectFill;
+    config[@"• 3 sets of seated row"] = seatedRowImageView;
+    
+    UIImageView *inclineDumbbellCurlsImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"dumbbellcurl"]];
+    inclineDumbbellCurlsImageView.contentMode = UIViewContentModeScaleAspectFill;
+    config[@"• 3 sets of incline dumbbell curls"] = inclineDumbbellCurlsImageView;
+    
+    UIImageView *dumbbellCurlsImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"dumbbellHammerCurls1"]];
+    dumbbellCurlsImageView.contentMode = UIViewContentModeScaleAspectFill;
+    config[@"• 3 sets of dumbbell hammer curls"] = dumbbellCurlsImageView;
+    return config;
 }
 
 @end
