@@ -1,10 +1,10 @@
 #import "MemberViewController.h"
 
-#import "WorkoutDashboardView.h"
+#import "WorkoutDashboardViewController.h"
 
 @interface MemberViewController ()
 
-@property(nonatomic, readonly) UIView *workoutRoutineView;
+@property(nonatomic, readonly) UIViewController *workoutRoutineViewController;
 
 @end
 
@@ -14,8 +14,8 @@
     self = [super init];
     
     if (self) {
-        _workoutRoutineView = [[WorkoutDashboardView alloc] init];
-        _workoutRoutineView.translatesAutoresizingMaskIntoConstraints = NO;
+        _workoutRoutineViewController = [[WorkoutDashboardViewController alloc] init];
+        _workoutRoutineViewController.view.translatesAutoresizingMaskIntoConstraints = NO;
         [self renderWorkoutRoutineView];
     }
 
@@ -29,12 +29,12 @@
 #pragma mark - Private
 
 - (void)renderWorkoutRoutineView {
-    [self.view addSubview:self.workoutRoutineView];
+    [self.view addSubview:self.workoutRoutineViewController.view];
     [NSLayoutConstraint activateConstraints:@[
-        [self.workoutRoutineView.widthAnchor constraintEqualToAnchor:self.view.widthAnchor],
-        [self.workoutRoutineView.heightAnchor constraintEqualToAnchor:self.view.heightAnchor],
-        [self.workoutRoutineView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
-        [self.workoutRoutineView.topAnchor constraintEqualToAnchor:self.view.topAnchor],
+        [self.workoutRoutineViewController.view.widthAnchor constraintEqualToAnchor:self.view.widthAnchor],
+        [self.workoutRoutineViewController.view.heightAnchor constraintEqualToAnchor:self.view.heightAnchor],
+        [self.workoutRoutineViewController.view.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
+        [self.workoutRoutineViewController.view.topAnchor constraintEqualToAnchor:self.view.topAnchor],
     ]];
 }
 

@@ -16,9 +16,10 @@
 		3209C91227E1753F002BF272 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3209C91127E1753F002BF272 /* Assets.xcassets */; };
 		3209C91527E1753F002BF272 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3209C91327E1753F002BF272 /* LaunchScreen.storyboard */; };
 		3209C91827E1753F002BF272 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3209C91727E1753F002BF272 /* main.m */; };
-		327744052807BAEE00019756 /* WorkoutDashboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 327744042807BAEE00019756 /* WorkoutDashboardView.m */; };
+		327744052807BAEE00019756 /* WorkoutDashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 327744042807BAEE00019756 /* WorkoutDashboardViewController.m */; };
 		327744082807BFB400019756 /* WorkoutRoutineCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 327744072807BFB400019756 /* WorkoutRoutineCollectionViewController.m */; };
 		3277440B2807C19600019756 /* WorkoutExerciseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3277440A2807C19600019756 /* WorkoutExerciseCell.m */; };
+		3278434B280BB2AD005C75EC /* ContactUsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3278434A280BB2AD005C75EC /* ContactUsView.m */; };
 		32CC922527FD368800DBC9E6 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32CC922427FD368800DBC9E6 /* Roboto-Light.ttf */; };
 		32CC922727FD369F00DBC9E6 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32CC922627FD369F00DBC9E6 /* Roboto-Regular.ttf */; };
 		32CC922927FD36AC00DBC9E6 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32CC922827FD36AC00DBC9E6 /* Roboto-Thin.ttf */; };
@@ -47,12 +48,14 @@
 		3209C91427E1753F002BF272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3209C91627E1753F002BF272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3209C91727E1753F002BF272 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		327744042807BAEE00019756 /* WorkoutDashboardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkoutDashboardView.m; sourceTree = "<group>"; };
-		327744062807BAFF00019756 /* WorkoutDashboardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkoutDashboardView.h; sourceTree = "<group>"; };
+		327744042807BAEE00019756 /* WorkoutDashboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkoutDashboardViewController.m; sourceTree = "<group>"; };
+		327744062807BAFF00019756 /* WorkoutDashboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkoutDashboardViewController.h; sourceTree = "<group>"; };
 		327744072807BFB400019756 /* WorkoutRoutineCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkoutRoutineCollectionViewController.m; sourceTree = "<group>"; };
 		327744092807BFC400019756 /* WorkoutRoutineCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkoutRoutineCollectionViewController.h; sourceTree = "<group>"; };
 		3277440A2807C19600019756 /* WorkoutExerciseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkoutExerciseCell.m; sourceTree = "<group>"; };
 		3277440C2807C1A300019756 /* WorkoutExerciseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkoutExerciseCell.h; sourceTree = "<group>"; };
+		3278434A280BB2AD005C75EC /* ContactUsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactUsView.m; sourceTree = "<group>"; };
+		3278434C280BB2BA005C75EC /* ContactUsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactUsView.h; sourceTree = "<group>"; };
 		32CC922427FD368800DBC9E6 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		32CC922627FD369F00DBC9E6 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		32CC922827FD36AC00DBC9E6 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
@@ -110,6 +113,8 @@
 				3202D88527EFCC17001CEF93 /* AccountCreationViewController.m */,
 				3209C90527E1753E002BF272 /* AppDelegate.h */,
 				3209C90627E1753E002BF272 /* AppDelegate.m */,
+				3278434C280BB2BA005C75EC /* ContactUsView.h */,
+				3278434A280BB2AD005C75EC /* ContactUsView.m */,
 				3202D88227EFB4B0001CEF93 /* HomeViewController.h */,
 				3202D88327EFB4C1001CEF93 /* HomeViewController.m */,
 				32CC92302805250900DBC9E6 /* MemberViewController.h */,
@@ -118,8 +123,8 @@
 				3209C90927E1753E002BF272 /* SceneDelegate.m */,
 				3209C90B27E1753E002BF272 /* ViewController.h */,
 				3209C90C27E1753E002BF272 /* ViewController.m */,
-				327744062807BAFF00019756 /* WorkoutDashboardView.h */,
-				327744042807BAEE00019756 /* WorkoutDashboardView.m */,
+				327744062807BAFF00019756 /* WorkoutDashboardViewController.h */,
+				327744042807BAEE00019756 /* WorkoutDashboardViewController.m */,
 				3277440C2807C1A300019756 /* WorkoutExerciseCell.h */,
 				3277440A2807C19600019756 /* WorkoutExerciseCell.m */,
 				327744092807BFC400019756 /* WorkoutRoutineCollectionViewController.h */,
@@ -289,10 +294,11 @@
 				3209C90D27E1753E002BF272 /* ViewController.m in Sources */,
 				32CC92322805252E00DBC9E6 /* MemberViewController.m in Sources */,
 				3202D88427EFB4C1001CEF93 /* HomeViewController.m in Sources */,
-				327744052807BAEE00019756 /* WorkoutDashboardView.m in Sources */,
+				327744052807BAEE00019756 /* WorkoutDashboardViewController.m in Sources */,
 				327744082807BFB400019756 /* WorkoutRoutineCollectionViewController.m in Sources */,
 				3202D88627EFCC17001CEF93 /* AccountCreationViewController.m in Sources */,
 				3209C90727E1753E002BF272 /* AppDelegate.m in Sources */,
+				3278434B280BB2AD005C75EC /* ContactUsView.m in Sources */,
 				3209C91827E1753F002BF272 /* main.m in Sources */,
 				3209C90A27E1753E002BF272 /* SceneDelegate.m in Sources */,
 				3277440B2807C19600019756 /* WorkoutExerciseCell.m in Sources */,

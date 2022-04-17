@@ -1,15 +1,16 @@
-#import "WorkoutDashboardView.h"
+#import "WorkoutDashboardViewController.h"
 
+#import "ContactUsView.h"
 #import "WorkoutRoutineCollectionViewController.h"
 
-@interface WorkoutDashboardView () <UITabBarDelegate>
+@interface WorkoutDashboardViewController () <UITabBarDelegate>
 
 @property(nonatomic, readonly) UITabBar *memberTabBar;
 @property(nonatomic, readonly) UICollectionViewController *routineCollectionViewController;
 
 @end
 
-@implementation WorkoutDashboardView
+@implementation WorkoutDashboardViewController
 
 - (instancetype)init {
     self = [super init];
@@ -17,12 +18,12 @@
     if (self) {
         UILabel *helloLabel = [[self class] labelWithText:@"Hello Luis!" size:28];
         helloLabel.textColor = UIColor.whiteColor;
-        [self addSubview:helloLabel];
+        [self.view addSubview:helloLabel];
         [helloLabel sizeToFit];
         
         [NSLayoutConstraint activateConstraints:@[
-            [helloLabel.centerXAnchor constraintEqualToAnchor:self.centerXAnchor],
-            [helloLabel.topAnchor constraintEqualToAnchor:self.topAnchor constant:80],
+            [helloLabel.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
+            [helloLabel.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:80],
         ]];
         
         UILabel *introLabel = [[self class] labelWithText:@"" size:16];
@@ -36,18 +37,18 @@
         introLabel.attributedText = attrText;
         introLabel.textColor = UIColor.whiteColor;
         introLabel.textAlignment = NSTextAlignmentCenter;
-        [self addSubview:introLabel];
+        [self.view addSubview:introLabel];
         [introLabel sizeToFit];
         
         [NSLayoutConstraint activateConstraints:@[
-            [introLabel.centerXAnchor constraintEqualToAnchor:self.centerXAnchor],
+            [introLabel.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
             [introLabel.topAnchor constraintEqualToAnchor:helloLabel.bottomAnchor constant:40],
-            [introLabel.widthAnchor constraintEqualToAnchor:self.widthAnchor multiplier:.85],
+            [introLabel.widthAnchor constraintEqualToAnchor:self.view.widthAnchor multiplier:.85],
         ]];
 
         _routineCollectionViewController = [[WorkoutRoutineCollectionViewController alloc] initWithConfig:[[self class] workoutRoutineConfig]];
         _routineCollectionViewController.view.translatesAutoresizingMaskIntoConstraints = NO;
-        [self addSubview:_routineCollectionViewController.view];
+        [self.view addSubview:_routineCollectionViewController.view];
         
         UIView *contactUsContainer = [[UIView alloc] init];
         contactUsContainer.translatesAutoresizingMaskIntoConstraints = NO;
@@ -70,22 +71,22 @@
         [reachOutLabel addGestureRecognizer:tapGestureRecognizer];
         reachOutLabel.userInteractionEnabled = YES;
 
-        [self addSubview:contactUsContainer];
+        [self.view addSubview:contactUsContainer];
         
         CGFloat containerWidth = ifLabel.bounds.size.width + reachOutLabel.bounds.size.width + 5;
         
         [NSLayoutConstraint activateConstraints:@[
             [_routineCollectionViewController.view.topAnchor constraintEqualToAnchor:introLabel.bottomAnchor constant:10],
-            [_routineCollectionViewController.view.centerXAnchor constraintEqualToAnchor:self.centerXAnchor],
-            [_routineCollectionViewController.view.widthAnchor constraintEqualToAnchor:self.widthAnchor],
+            [_routineCollectionViewController.view.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
+            [_routineCollectionViewController.view.widthAnchor constraintEqualToAnchor:self.view.widthAnchor],
             [_routineCollectionViewController.view.bottomAnchor constraintEqualToAnchor:contactUsContainer.topAnchor],
         ]];
         
         [NSLayoutConstraint activateConstraints:@[
-            [contactUsContainer.centerXAnchor constraintEqualToAnchor:self.centerXAnchor],
+            [contactUsContainer.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
             [contactUsContainer.widthAnchor constraintEqualToConstant:containerWidth],
             [contactUsContainer.heightAnchor constraintEqualToConstant:reachOutLabel.bounds.size.height],
-            [contactUsContainer.bottomAnchor constraintEqualToAnchor:self.bottomAnchor constant:-50],
+            [contactUsContainer.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:-50],
             [ifLabel.leadingAnchor constraintEqualToAnchor:contactUsContainer.leadingAnchor],
             [reachOutLabel.leadingAnchor constraintEqualToAnchor:ifLabel.trailingAnchor constant:5],
         ]];
@@ -96,17 +97,26 @@
 
 #pragma mark - UIView overrides
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
+- (void)viewDidLoad {
+    [super viewDidLoad];
     
     UIColor *backgroundColor = [UIColor colorWithRed:20/255.0 green:43/255.0 blue:63/255.0 alpha:1];
-    self.backgroundColor = backgroundColor;
+    self.view.backgroundColor = backgroundColor;
 }
 
 #pragma mark - Private
 
 - (void)didTapContactUsLabel {
+    ContactUsView *contactUsView = [[ContactUsView alloc] init];
+    contactUsView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:contactUsView];
     
+    [NSLayoutConstraint activateConstraints:@[
+        [contactUsView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
+        [contactUsView.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor],
+        [contactUsView.widthAnchor constraintEqualToAnchor:self.view.widthAnchor],
+        [contactUsView.heightAnchor constraintEqualToAnchor:self.view.heightAnchor],
+    ]];
 }
 
 + (UILabel *)labelWithText:(NSString *)text size:(CGFloat)size {
