@@ -26,7 +26,7 @@
         ]];
         
         UILabel *introLabel = [[self class] labelWithText:@"" size:16];
-        NSString *text = @"Your trainer, Andrew, left you these sets of exercises for you to complete. If you have any questions reach out!";
+        NSString *text = @"Your trainer, Andrew, left you these sets of exercises for you to complete.";
         NSMutableParagraphStyle *introParagraph = [[NSMutableParagraphStyle alloc] init];
         introParagraph.alignment = NSTextAlignmentCenter;
         introParagraph.lineSpacing = 2.0f;
@@ -49,11 +49,45 @@
         _routineCollectionViewController.view.translatesAutoresizingMaskIntoConstraints = NO;
         [self addSubview:_routineCollectionViewController.view];
         
+        UIView *contactUsContainer = [[UIView alloc] init];
+        contactUsContainer.translatesAutoresizingMaskIntoConstraints = NO;
+        
+        UILabel *ifLabel = [[self class] labelWithText:@"If you have any questions, " size:18];
+        ifLabel.textColor = UIColor.whiteColor;
+        [contactUsContainer addSubview:ifLabel];
+        [ifLabel sizeToFit];
+        
+        UILabel *reachOutLabel = [[self class] labelWithText:@"" size:18];
+        NSMutableAttributedString *attributedString;
+        attributedString = [[NSMutableAttributedString alloc] initWithString:@"reach out!"];
+        [attributedString addAttribute:NSUnderlineStyleAttributeName value:@1 range:NSMakeRange(0, [attributedString length])];
+        [reachOutLabel setAttributedText:attributedString];
+        reachOutLabel.textColor = UIColor.whiteColor;
+        [contactUsContainer addSubview:reachOutLabel];
+        [reachOutLabel sizeToFit];
+        
+        UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapContactUsLabel)];
+        [reachOutLabel addGestureRecognizer:tapGestureRecognizer];
+        reachOutLabel.userInteractionEnabled = YES;
+
+        [self addSubview:contactUsContainer];
+        
+        CGFloat containerWidth = ifLabel.bounds.size.width + reachOutLabel.bounds.size.width + 5;
+        
         [NSLayoutConstraint activateConstraints:@[
             [_routineCollectionViewController.view.topAnchor constraintEqualToAnchor:introLabel.bottomAnchor constant:10],
             [_routineCollectionViewController.view.centerXAnchor constraintEqualToAnchor:self.centerXAnchor],
             [_routineCollectionViewController.view.widthAnchor constraintEqualToAnchor:self.widthAnchor],
-            [_routineCollectionViewController.view.bottomAnchor constraintEqualToAnchor:self.bottomAnchor],
+            [_routineCollectionViewController.view.bottomAnchor constraintEqualToAnchor:contactUsContainer.topAnchor],
+        ]];
+        
+        [NSLayoutConstraint activateConstraints:@[
+            [contactUsContainer.centerXAnchor constraintEqualToAnchor:self.centerXAnchor],
+            [contactUsContainer.widthAnchor constraintEqualToConstant:containerWidth],
+            [contactUsContainer.heightAnchor constraintEqualToConstant:reachOutLabel.bounds.size.height],
+            [contactUsContainer.bottomAnchor constraintEqualToAnchor:self.bottomAnchor constant:-50],
+            [ifLabel.leadingAnchor constraintEqualToAnchor:contactUsContainer.leadingAnchor],
+            [reachOutLabel.leadingAnchor constraintEqualToAnchor:ifLabel.trailingAnchor constant:5],
         ]];
     }
 
@@ -67,11 +101,13 @@
     
     UIColor *backgroundColor = [UIColor colorWithRed:20/255.0 green:43/255.0 blue:63/255.0 alpha:1];
     self.backgroundColor = backgroundColor;
-    
-    
 }
 
 #pragma mark - Private
+
+- (void)didTapContactUsLabel {
+    
+}
 
 + (UILabel *)labelWithText:(NSString *)text size:(CGFloat)size {
     UILabel *label = [[UILabel alloc] init];
