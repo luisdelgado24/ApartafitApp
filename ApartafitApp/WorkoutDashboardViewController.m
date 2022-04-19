@@ -1,6 +1,6 @@
 #import "WorkoutDashboardViewController.h"
 
-#import "ContactUsView.h"
+#import "ContactUsViewController.h"
 #import "WorkoutRoutineCollectionViewController.h"
 
 @interface WorkoutDashboardViewController () <UITabBarDelegate>
@@ -107,16 +107,8 @@
 #pragma mark - Private
 
 - (void)didTapContactUsLabel {
-    ContactUsView *contactUsView = [[ContactUsView alloc] init];
-    contactUsView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addSubview:contactUsView];
-    
-    [NSLayoutConstraint activateConstraints:@[
-        [contactUsView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
-        [contactUsView.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor],
-        [contactUsView.widthAnchor constraintEqualToAnchor:self.view.widthAnchor],
-        [contactUsView.heightAnchor constraintEqualToAnchor:self.view.heightAnchor],
-    ]];
+    ContactUsViewController *contactUsViewController = [[ContactUsViewController alloc] init];
+    [self presentViewController:contactUsViewController animated:YES completion:nil];
 }
 
 + (UILabel *)labelWithText:(NSString *)text size:(CGFloat)size {
