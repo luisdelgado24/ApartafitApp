@@ -52,7 +52,7 @@
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
 
-    UIColor *backgroundColor = [UIColor colorWithRed:20/255.0 green:43/255.0 blue:63/255.0 alpha:1];
+    UIColor *backgroundColor = [UIColor colorWithRed:66/255.0 green:182/255.0 blue:132/255.0 alpha:1];
     self.view.backgroundColor = backgroundColor;
     
     [self.introLabel sizeToFit];
@@ -76,7 +76,7 @@
 }
 
 - (UIModalPresentationStyle)modalPresentationStyle {
-    return UIModalPresentationFormSheet;
+    return UIModalPresentationFullScreen;
 }
 
 #pragma mark - Private
@@ -97,11 +97,10 @@
 
 + (UITextField *)textFieldWithPlaceholderText:(NSString *)placeholderText {
     UITextField *textField = [[UITextField alloc] init];
-    textField.backgroundColor = [UIColor colorWithRed:8/255.0 green:20/255.0 blue:42/255.0 alpha:1];
+    textField.backgroundColor = UIColor.whiteColor;//[UIColor colorWithRed:8/255.0 green:20/255.0 blue:42/255.0 alpha:1];
     textField.placeholder = placeholderText;
-    UIColor *placeholderTextColor = [UIColor colorWithRed:225/255.0 green:227/255.0 blue:228/255.0 alpha:1];
-    textField.textColor = placeholderTextColor;
-    textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:placeholderText attributes:@{ NSForegroundColorAttributeName : placeholderTextColor }];
+    textField.textColor = UIColor.blackColor;
+    textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:placeholderText attributes:@{ NSForegroundColorAttributeName : UIColor.blackColor }];
     textField.translatesAutoresizingMaskIntoConstraints = NO;
     textField.borderStyle = UITextBorderStyleLine;
     textField.textAlignment = NSTextAlignmentLeft;

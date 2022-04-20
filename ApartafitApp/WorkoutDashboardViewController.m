@@ -7,6 +7,7 @@
 
 @property(nonatomic, readonly) UITabBar *memberTabBar;
 @property(nonatomic, readonly) UICollectionViewController *routineCollectionViewController;
+@property(nonatomic, readonly) UINavigationController *contactUsNavigationController;
 
 @end
 
@@ -90,6 +91,20 @@
             [ifLabel.leadingAnchor constraintEqualToAnchor:contactUsContainer.leadingAnchor],
             [reachOutLabel.leadingAnchor constraintEqualToAnchor:ifLabel.trailingAnchor constant:5],
         ]];
+        
+        ContactUsViewController *contactUsViewController = [[ContactUsViewController alloc] init];
+        UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"close-icon"] style:UIBarButtonItemStylePlain target:self action:@selector(didTapGoBack)];
+        backButton.tintColor = UIColor.blackColor;
+        contactUsViewController.navigationItem.leftBarButtonItem = backButton;
+        contactUsViewController.navigationItem.title = @"Contact us";
+        
+        UIColor *navControllerBackgroundColor = [UIColor colorWithRed:66/255.0 green:182/255.0 blue:132/255.0 alpha:1];
+        
+        _contactUsNavigationController = [[UINavigationController alloc] initWithRootViewController:contactUsViewController];
+        _contactUsNavigationController.navigationBar.translucent = NO;
+        _contactUsNavigationController.modalPresentationStyle = UIModalPresentationPopover;
+        _contactUsNavigationController.navigationBar.backgroundColor = navControllerBackgroundColor;
+        _contactUsNavigationController.navigationBar.titleTextAttributes = @{ NSFontAttributeName : [UIFont fontWithName:@"Roboto-Black" size:18] };
     }
 
     return self;
@@ -106,9 +121,12 @@
 
 #pragma mark - Private
 
+- (void)didTapGoBack {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (void)didTapContactUsLabel {
-    ContactUsViewController *contactUsViewController = [[ContactUsViewController alloc] init];
-    [self presentViewController:contactUsViewController animated:YES completion:nil];
+    [self presentViewController:self.contactUsNavigationController animated:YES completion:nil];
 }
 
 + (UILabel *)labelWithText:(NSString *)text size:(CGFloat)size {
