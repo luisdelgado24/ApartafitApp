@@ -1,8 +1,11 @@
 #import "HomeViewController.h"
 
 #import "AccountCreationViewController.h"
-#import "MaterialButtons.h"
 #import "MemberViewController.h"
+
+@import GoogleSignIn;
+@import FirebaseCore;
+@import FirebaseAuth;
 
 @interface HomeViewController ()
 
@@ -59,46 +62,24 @@
           forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:signUpButton];
 
+    GIDSignInButton *googleButton = [[GIDSignInButton alloc] init];
+    googleButton.translatesAutoresizingMaskIntoConstraints = NO;
+    [googleButton setStyle:kGIDSignInButtonStyleWide];
+    [googleButton addTarget:self action:@selector(didTapLoginLabel) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:googleButton];
+
     [NSLayoutConstraint activateConstraints:@[
         [signUpButton.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
         [signUpButton.widthAnchor constraintEqualToAnchor:self.view.widthAnchor multiplier:.70],
         [signUpButton.heightAnchor constraintEqualToConstant:50],
-        [signUpButton.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:-65],
+        [signUpButton.bottomAnchor constraintEqualToAnchor:googleButton.topAnchor constant:-10],
     ]];
-    
-    UIView *orLoginContainer = [[UIView alloc] init];
-    orLoginContainer.translatesAutoresizingMaskIntoConstraints = NO;
-    
-    UILabel *orLabel = [[self class] labelWithText:@"or" size:14];
-    orLabel.textColor = UIColor.whiteColor;
-    [orLoginContainer addSubview:orLabel];
-    [orLabel sizeToFit];
-    
-    
-    UILabel *loginLabel = [[self class] labelWithText:@"" size:14];
-    NSMutableAttributedString *attributedString;
-    attributedString = [[NSMutableAttributedString alloc] initWithString:@"Log in"];
-    [attributedString addAttribute:NSUnderlineStyleAttributeName value:@1 range:NSMakeRange(0, [attributedString length])];
-    [loginLabel setAttributedText:attributedString];
-    loginLabel.textColor = UIColor.whiteColor;
-    [orLoginContainer addSubview:loginLabel];
-    [loginLabel sizeToFit];
-    
-    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapLoginLabel)];
-    [loginLabel addGestureRecognizer:tapGestureRecognizer];
-    loginLabel.userInteractionEnabled = YES;
 
-    [self.view addSubview:orLoginContainer];
-    
-    CGFloat orLoginWidth = orLabel.bounds.size.width + loginLabel.bounds.size.width + 5;
-    
     [NSLayoutConstraint activateConstraints:@[
-        [orLoginContainer.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
-        [orLoginContainer.topAnchor constraintEqualToAnchor:signUpButton.bottomAnchor constant:5],
-        [orLoginContainer.widthAnchor constraintEqualToConstant:orLoginWidth],
-        [orLoginContainer.heightAnchor constraintEqualToConstant:loginLabel.bounds.size.height],
-        [orLabel.leadingAnchor constraintEqualToAnchor:orLoginContainer.leadingAnchor],
-        [loginLabel.leadingAnchor constraintEqualToAnchor:orLabel.trailingAnchor constant:5],
+        [googleButton.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
+        [googleButton.widthAnchor constraintEqualToAnchor:self.view.widthAnchor multiplier:.70],
+        [googleButton.heightAnchor constraintEqualToConstant:50],
+        [googleButton.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:-65],
     ]];
 }
 
@@ -108,8 +89,25 @@
 }
 
 - (void)didTapLoginLabel {
-    MemberViewController *memberViewController = [[MemberViewController alloc] init];
-    [self presentViewController:memberViewController animated:YES completion:nil];
+    GIDConfiguration *config = [[GIDConfiguration alloc] initWithClientID:[FIRApp defaultApp].options.clientID];
+
+    __weak __auto_type weakSelf = self;
+    [GIDSignIn.sharedInstance signInWithConfiguration:config presentingViewController:self callback:^(GIDGoogleUser * _Nullable user, NSError * _Nullable error) {
+      __auto_type strongSelf = weakSelf;
+      if (strongSelf == nil) { return; }
+
+      if (error == nil) {
+        GIDAuthentication *authentication = user.authentication;
+        FIRAuthCredential *credential =
+        [FIRGoogleAuthProvider credentialWithIDToken:authentication.idToken
+                                         accessToken:authentication.accessToken];
+        
+        MemberViewController *memberViewController = [[MemberViewController alloc] init];
+        [self presentViewController:memberViewController animated:YES completion:nil];
+      } else {
+          NSLog(@"Error!!");
+      }
+    }];
 }
 
 + (UILabel *)labelWithText:(NSString *)text size:(CGFloat)size {

@@ -6,6 +6,8 @@ target 'ApartafitApp' do
   use_frameworks! :linkage => :static
 
   # Pods for ApartafitApp
-  pod 'MaterialComponents'
-  pod 'FirebaseUI'
+  pod 'FirebaseCore'
+  pod 'FirebaseAuth'
+  pod 'FirebaseAnalytics'
+  pod 'GoogleSignIn'
 end

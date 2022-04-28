@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		117CC667B32DED900E0CBC08 /* Pods_ApartafitApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB800765C7E6F7D2F6498B8 /* Pods_ApartafitApp.framework */; };
 		3202D88427EFB4C1001CEF93 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3202D88327EFB4C1001CEF93 /* HomeViewController.m */; };
 		3202D88627EFCC17001CEF93 /* AccountCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3202D88527EFCC17001CEF93 /* AccountCreationViewController.m */; };
 		3209C90727E1753E002BF272 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3209C90627E1753E002BF272 /* AppDelegate.m */; };
@@ -27,11 +28,10 @@
 		32CC922D27FFD56F00DBC9E6 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32CC922B27FFD56F00DBC9E6 /* Roboto-Medium.ttf */; };
 		32CC922F28051DC500DBC9E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32CC922E28051DC500DBC9E6 /* GoogleService-Info.plist */; };
 		32CC92322805252E00DBC9E6 /* MemberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CC92312805252E00DBC9E6 /* MemberViewController.m */; };
-		8A4C424BB32B6B0390C390C7 /* Pods_ApartafitApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301C08C20F34DFE64507B8CA /* Pods_ApartafitApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		301C08C20F34DFE64507B8CA /* Pods_ApartafitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApartafitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CB800765C7E6F7D2F6498B8 /* Pods_ApartafitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApartafitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3202D88227EFB4B0001CEF93 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		3202D88327EFB4C1001CEF93 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		3202D88527EFCC17001CEF93 /* AccountCreationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountCreationViewController.m; sourceTree = "<group>"; };
@@ -64,8 +64,8 @@
 		32CC922E28051DC500DBC9E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		32CC92302805250900DBC9E6 /* MemberViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberViewController.h; sourceTree = "<group>"; };
 		32CC92312805252E00DBC9E6 /* MemberViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberViewController.m; sourceTree = "<group>"; };
-		70BC21F8E8F95A79FC25DF2B /* Pods-ApartafitApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApartafitApp.debug.xcconfig"; path = "Target Support Files/Pods-ApartafitApp/Pods-ApartafitApp.debug.xcconfig"; sourceTree = "<group>"; };
-		D3B91CC8A437F8A5C1CB799D /* Pods-ApartafitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApartafitApp.release.xcconfig"; path = "Target Support Files/Pods-ApartafitApp/Pods-ApartafitApp.release.xcconfig"; sourceTree = "<group>"; };
+		D582C755639F1DD7C398D5DF /* Pods-ApartafitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApartafitApp.release.xcconfig"; path = "Target Support Files/Pods-ApartafitApp/Pods-ApartafitApp.release.xcconfig"; sourceTree = "<group>"; };
+		F94F7C455903855CEAFA471C /* Pods-ApartafitApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApartafitApp.debug.xcconfig"; path = "Target Support Files/Pods-ApartafitApp/Pods-ApartafitApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,28 +73,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A4C424BB32B6B0390C390C7 /* Pods_ApartafitApp.framework in Frameworks */,
+				117CC667B32DED900E0CBC08 /* Pods_ApartafitApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2EF01CA57A416B25C255FAD2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				301C08C20F34DFE64507B8CA /* Pods_ApartafitApp.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		3209C8F927E1753E002BF272 = {
 			isa = PBXGroup;
 			children = (
 				3209C90427E1753E002BF272 /* ApartafitApp */,
 				3209C90327E1753E002BF272 /* Products */,
 				5477DB2ECBC0A74F01119010 /* Pods */,
-				2EF01CA57A416B25C255FAD2 /* Frameworks */,
+				54238DA7F66E19402852009D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,11 +136,19 @@
 			path = ApartafitApp;
 			sourceTree = "<group>";
 		};
+		54238DA7F66E19402852009D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2CB800765C7E6F7D2F6498B8 /* Pods_ApartafitApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5477DB2ECBC0A74F01119010 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				70BC21F8E8F95A79FC25DF2B /* Pods-ApartafitApp.debug.xcconfig */,
-				D3B91CC8A437F8A5C1CB799D /* Pods-ApartafitApp.release.xcconfig */,
+				F94F7C455903855CEAFA471C /* Pods-ApartafitApp.debug.xcconfig */,
+				D582C755639F1DD7C398D5DF /* Pods-ApartafitApp.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -160,12 +160,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3209C91B27E1753F002BF272 /* Build configuration list for PBXNativeTarget "ApartafitApp" */;
 			buildPhases = (
-				FB16F7CF9117A22781B426F9 /* [CP] Check Pods Manifest.lock */,
+				1473B8D4B16C76814E3160A9 /* [CP] Check Pods Manifest.lock */,
 				3209C8FE27E1753E002BF272 /* Sources */,
 				3209C8FF27E1753E002BF272 /* Frameworks */,
 				3209C90027E1753E002BF272 /* Resources */,
-				7FB413313C2DE696C18361B9 /* [CP] Embed Pods Frameworks */,
-				112AD868A49BF0D368B37107 /* [CP] Copy Pods Resources */,
+				EF6A23574DD199F74682C183 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,41 +227,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		112AD868A49BF0D368B37107 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ApartafitApp/Pods-ApartafitApp-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ApartafitApp/Pods-ApartafitApp-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ApartafitApp/Pods-ApartafitApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7FB413313C2DE696C18361B9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ApartafitApp/Pods-ApartafitApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ApartafitApp/Pods-ApartafitApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ApartafitApp/Pods-ApartafitApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FB16F7CF9117A22781B426F9 /* [CP] Check Pods Manifest.lock */ = {
+		1473B8D4B16C76814E3160A9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -282,6 +247,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF6A23574DD199F74682C183 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ApartafitApp/Pods-ApartafitApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ApartafitApp/Pods-ApartafitApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ApartafitApp/Pods-ApartafitApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -441,7 +423,7 @@
 		};
 		3209C91C27E1753F002BF272 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70BC21F8E8F95A79FC25DF2B /* Pods-ApartafitApp.debug.xcconfig */;
+			baseConfigurationReference = F94F7C455903855CEAFA471C /* Pods-ApartafitApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -468,7 +450,7 @@
 		};
 		3209C91D27E1753F002BF272 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D3B91CC8A437F8A5C1CB799D /* Pods-ApartafitApp.release.xcconfig */;
+			baseConfigurationReference = D582C755639F1DD7C398D5DF /* Pods-ApartafitApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
