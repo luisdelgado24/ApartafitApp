@@ -46,6 +46,7 @@
 
 - (void)userDidSuccessfullyLogout {
     [self dismissViewControllerAnimated:YES completion:nil];
+    [self renderLoginState];
 }
 
 #pragma mark - Private
