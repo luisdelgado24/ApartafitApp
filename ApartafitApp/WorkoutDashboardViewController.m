@@ -3,6 +3,10 @@
 #import "ContactUsViewController.h"
 #import "WorkoutRoutineCollectionViewController.h"
 
+@import GoogleSignIn;
+@import FirebaseCore;
+@import FirebaseAuth;
+
 @interface WorkoutDashboardViewController () <UITabBarDelegate>
 
 @property(nonatomic, readonly) UITabBar *memberTabBar;
@@ -22,9 +26,20 @@
         [self.view addSubview:helloLabel];
         [helloLabel sizeToFit];
         
+        UILabel *signOutLabel = [[self class] labelWithText:@"(Sign out)" size:14];
+        signOutLabel.textColor = UIColor.whiteColor;
+        signOutLabel.userInteractionEnabled = YES;
+        [self.view addSubview:signOutLabel];
+        [signOutLabel sizeToFit];
+        
+        UITapGestureRecognizer *signOutTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapSignOut)];
+        [signOutLabel addGestureRecognizer:signOutTapRecognizer];
+        
         [NSLayoutConstraint activateConstraints:@[
             [helloLabel.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
             [helloLabel.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:80],
+            [signOutLabel.centerYAnchor constraintEqualToAnchor:helloLabel.centerYAnchor],
+            [signOutLabel.leadingAnchor constraintEqualToAnchor:helloLabel.trailingAnchor constant:8],
         ]];
         
         UILabel *introLabel = [[self class] labelWithText:@"" size:16];
@@ -127,6 +142,17 @@
 
 - (void)didTapContactUsLabel {
     [self presentViewController:self.contactUsNavigationController animated:YES completion:nil];
+}
+
+- (void)didTapSignOut {
+    NSError *signOutError;
+    BOOL status = [[FIRAuth auth] signOut:&signOutError];
+    if (!status) {
+      NSLog(@"Error signing out: %@", signOutError);
+      return;
+    } else {
+      [self.delegate userDidSuccessfullyLogout];
+    }
 }
 
 + (UILabel *)labelWithText:(NSString *)text size:(CGFloat)size {

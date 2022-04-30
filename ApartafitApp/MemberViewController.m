@@ -2,9 +2,9 @@
 
 #import "WorkoutDashboardViewController.h"
 
-@interface MemberViewController ()
+@interface MemberViewController () <WorkoutDashboardViewControllerDelegate>
 
-@property(nonatomic, readonly) UIViewController *workoutRoutineViewController;
+@property(nonatomic, readonly) WorkoutDashboardViewController *workoutRoutineViewController;
 
 @end
 
@@ -16,6 +16,7 @@
     if (self) {
         _workoutRoutineViewController = [[WorkoutDashboardViewController alloc] init];
         _workoutRoutineViewController.view.translatesAutoresizingMaskIntoConstraints = NO;
+        _workoutRoutineViewController.delegate = self;
         [self renderWorkoutRoutineView];
     }
 
@@ -24,6 +25,12 @@
 
 - (UIModalPresentationStyle)modalPresentationStyle {
     return UIModalPresentationFullScreen;
+}
+
+#pragma mark - WorkoutDashboardViewControllerDelegate
+
+- (void)userDidSuccessfullyLogout {
+    [self.delegate userDidSuccessfullyLogout];
 }
 
 #pragma mark - Private

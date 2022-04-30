@@ -7,9 +7,10 @@
 @import FirebaseCore;
 @import FirebaseAuth;
 
-@interface HomeViewController ()
+@interface HomeViewController () <MemberViewControllerDelegate>
 
 @property(nonatomic) UIImageView *backgroundImageView;
+@property(nonatomic) MemberViewController *memberViewController;
 
 @end
 
@@ -22,6 +23,12 @@
     self.view.backgroundColor = backgroundColor;
     
     [self renderLoginState];
+}
+
+#pragma mark - MemberViewControllerDelegate
+
+- (void)userDidSuccessfullyLogout {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Private
@@ -77,7 +84,7 @@
 
     [NSLayoutConstraint activateConstraints:@[
         [googleButton.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
-        [googleButton.widthAnchor constraintEqualToAnchor:self.view.widthAnchor multiplier:.70],
+        [googleButton.widthAnchor constraintEqualToAnchor:self.view.widthAnchor multiplier:.72],
         [googleButton.heightAnchor constraintEqualToConstant:50],
         [googleButton.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:-65],
     ]];
@@ -102,8 +109,9 @@
         [FIRGoogleAuthProvider credentialWithIDToken:authentication.idToken
                                          accessToken:authentication.accessToken];
         
-        MemberViewController *memberViewController = [[MemberViewController alloc] init];
-        [self presentViewController:memberViewController animated:YES completion:nil];
+        self.memberViewController = [[MemberViewController alloc] init];
+        self.memberViewController.delegate = self;
+        [self presentViewController:self.memberViewController animated:YES completion:nil];
       } else {
           NSLog(@"Error!!");
       }
