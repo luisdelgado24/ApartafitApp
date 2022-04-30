@@ -3,7 +3,7 @@
 #import "AccountCreationViewController.h"
 #import "MemberViewController.h"
 
-@interface ContactUsViewController ()
+@interface ContactUsViewController () <UITextFieldDelegate>
 
 @property(nonatomic, readonly) UILabel *introLabel;
 @property(nonatomic, readonly) UITextField *textField;
@@ -32,10 +32,12 @@
         [self.view addSubview:_introLabel];
         
         _textField = [[self class] textFieldWithPlaceholderText:@"Description"];
+        _textField.delegate = self;
         [self.view addSubview:_textField];
         
         _sendButton = [[UIButton alloc] init];
         [_sendButton setTitle:@"Send" forState:UIControlStateNormal];
+        _sendButton.enabled = NO;
         _sendButton.titleLabel.textColor = [UIColor colorWithRed:20/255.0 green:43/255.0 blue:63/255.0 alpha:.5];
         _sendButton.translatesAutoresizingMaskIntoConstraints = NO;
         _sendButton.backgroundColor = [UIColor colorWithRed:83/255.0 green:147/255.0 blue:115/255.0 alpha:1];
@@ -78,10 +80,27 @@
     return UIModalPresentationFullScreen;
 }
 
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldClear:(UITextField *)textField {
+    [self.sendButton setEnabled:NO];
+    return YES;
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    NSString *characters = [textField.text stringByReplacingCharactersInRange:range withString:string];
+
+    if (textField == self.textField) {
+        self.sendButton.enabled = characters.length > 0;
+    }
+    
+    return YES;
+}
+
 #pragma mark - Private
 
 - (void)didTapSendButton {
-    
+    NSLog(@"aaa");
 }
 
 + (UILabel *)labelWithText:(NSString *)text size:(CGFloat)size {
