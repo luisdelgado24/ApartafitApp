@@ -11,7 +11,6 @@
 
 @property(nonatomic, readonly) UITabBar *memberTabBar;
 @property(nonatomic, readonly) UICollectionViewController *routineCollectionViewController;
-@property(nonatomic, readonly) UINavigationController *contactUsNavigationController;
 @property(nonatomic, readonly) ContactUsViewController *contactUsViewController;
 
 @end
@@ -113,14 +112,6 @@
         backButton.tintColor = UIColor.blackColor;
         _contactUsViewController.navigationItem.leftBarButtonItem = backButton;
         _contactUsViewController.navigationItem.title = @"Contact us";
-        
-//        UIColor *navControllerBackgroundColor = [UIColor colorWithRed:66/255.0 green:182/255.0 blue:132/255.0 alpha:1];
-        
-//        _contactUsNavigationController = [[UINavigationController alloc] initWithRootViewController:contactUsViewController];
-//        _contactUsNavigationController.navigationBar.translucent = NO;
-//        _contactUsNavigationController.modalPresentationStyle = UIModalPresentationPopover;
-//        _contactUsNavigationController.navigationBar.backgroundColor = navControllerBackgroundColor;
-//        _contactUsNavigationController.navigationBar.titleTextAttributes = @{ NSFontAttributeName : [UIFont fontWithName:@"Roboto-Black" size:18] };
     }
 
     return self;
@@ -145,7 +136,6 @@
 }
 
 - (void)didTapContactUsLabel {
-//    [self presentViewController:self.contactUsNavigationController animated:YES completion:nil];
     [UIView animateWithDuration:1
                      animations:^{
         [self.view addSubview:self.contactUsViewController.view];
