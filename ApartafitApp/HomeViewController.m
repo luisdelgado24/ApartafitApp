@@ -22,7 +22,24 @@
     UIColor *backgroundColor = [UIColor colorWithRed:20/255.0 green:43/255.0 blue:63/255.0 alpha:.5];
     self.view.backgroundColor = backgroundColor;
     
-    [self renderLoginState];
+    if ([GIDSignIn.sharedInstance hasPreviousSignIn]) {
+        __weak __auto_type weakSelf = self;
+        [GIDSignIn.sharedInstance restorePreviousSignInWithCallback:^(GIDGoogleUser * _Nullable user, NSError * _Nullable error) {
+            __auto_type strongSelf = weakSelf;
+            if (strongSelf == nil) { return; }
+
+            if (error == nil) {
+                self.memberViewController = [[MemberViewController alloc] init];
+                self.memberViewController.delegate = self;
+              [self presentViewController:self.memberViewController animated:YES completion:nil];
+            } else {
+                NSLog(@"Error!!");
+                [self renderLoginState];
+            }
+        }];
+    } else {
+        [self renderLoginState];
+    }
 }
 
 #pragma mark - MemberViewControllerDelegate
